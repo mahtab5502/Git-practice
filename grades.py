@@ -9,6 +9,13 @@ def get_scores():
 
     return scores
 
+def calculate_average(scores):
+    return sum(scores.values()) / len(scores)
+
 if __name__ == "__main__":
     scores = get_scores()
+
+    average = calculate_average(scores)
+
     print(scores)
+    print("평균:", average)
