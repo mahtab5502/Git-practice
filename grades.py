@@ -15,6 +15,14 @@ def calculate_average(scores):
     return sum(scores.values()) / len(scores)
 
 
+def find_highest(scores):
+    return max(scores, key=scores.get)
+
+
+def find_lowest(scores):
+    return min(scores, key=scores.get)
+
+
 def print_results(scores, average):
     print("점수 결과")
 
@@ -22,6 +30,12 @@ def print_results(scores, average):
         print(f"{subject}: {score}")
 
     print("평균:", average)
+
+    highest = find_highest(scores)
+    lowest = find_lowest(scores)
+
+    print("최고 점수 과목:", highest)
+    print("최저 점수 과목:", lowest)
 
 
 if __name__ == "__main__":
